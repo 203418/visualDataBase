@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+.input-custom {
+    border-color: chocolate !important;
+}
+
+.row-custom {
+    top: 10px !important;
+    width: 90%;
+    height: 90% !important;
+    left: 5%;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.formulario .boton{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario .boton button{
+    width: 80%;
+    height: 100px;
+}
+.formulario .datos{
+    width: 60%;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:space-around;
+    justify-content: space-around;
+    
+}
+.formulario .datos input{
+    width: 45%;
+}
+.table-container{
+    width: 80%;
+    margin:5px auto;
+    box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+}
+.table-container .table tr{
+    border: 1px solid #00d1b2;
+}
+.table-container .table tr td{
+    border: 1px solid #00d1b2;
+    text-align: center;
+    color:#b5b4b4;
+
+}

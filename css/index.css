@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    min-height: 100vh;
+    background: url(../Media/purple_vibes___android_n_wallpaper_by_shreydan-d9uofx9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+}
+
+.row-custom{
+    width:371px;
+    align-self: center;
+}
+.card-content{
+    background:url(../Media/images.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 500px;
+    
+}
+.imagen{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.imagen img{
+    transform: translateY(15%);
+    border: 1px solid rgb(157, 66, 223,0.3);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.formulario input{
+    width:250px;
+    margin: 15px auto;
+}
+.formulario .control{
+    margin:0 auto;
+}
