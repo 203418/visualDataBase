@@ -46,8 +46,17 @@
 }
 .table-container{
     width: 80%;
-    margin:5px auto;
+    margin:10px auto;
     box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+}
+.table-container .emblema{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.table-container .emblema span{
+    color:#8f8d8d;
+    font-size: 20px;
 }
 .table-container .table tr{
     border: 1px solid #00d1b2;
@@ -56,5 +65,4 @@
     border: 1px solid #00d1b2;
     text-align: center;
     color:#b5b4b4;
-
 }

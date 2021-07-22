@@ -7,8 +7,15 @@ var con;
 function validarLogin(){
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
+    process.env.host=localStorage.getItem('host');
+    process.env.user=localStorage.getItem('user');
+    process.env.password=localStorage.getItem('password');
+    process.env.database=localStorage.getItem('database');
+    process.env.port=localStorage.getItem('port');
+
     if(user=='admin' && password=='123'){
-        if (process.env.host != null || process.env.host != ''){
+        alert(process.env.host);
+        if (process.env.host != 'null'){
             location.href='./vista3.html';
         } else{
             location.href='./vista2.html';
@@ -18,7 +25,6 @@ function validarLogin(){
         alert('Datos erroneos');
     }
 }
-
 function sendParams(){
     con = require('./conect');
     // localStorage.setItem('con', con);
@@ -43,17 +49,12 @@ function addData(){
             return;
         }
         console.log("Query exitoso", rows.length);
-        alert(rows);
     });
     selectData();
-    con.end(function(){
-        con.destroy();
-    });
-
+    // con.end();
     // Input data conection database
 }
 function selectData(){
-    document.getElementById('table').style="overflow:visible;";
     $query = `select * from persona`;
     con.query($query, function (err, rows, fields) {
         if (err) {
@@ -63,10 +64,10 @@ function selectData(){
             return;
         }
         let html='';
-        html="<tr><td>"+rows[rows.length-1].id+"</td> <td>"+rows[rows.length-1].nombre+"</td> <td>"+rows[rows.length-1].ap_pat+"</td> <td>"+rows[rows.length-1].ap_mat+"</td> <td>"+rows[rows.length-1].edad+"</td></tr>"; 
-        // rows.forEach(function(element){
-        //     html+="<tr><td>"+rows[0].id+"</td> <td>Nombre</td> <td>Apellido Paterno</td> <td>Apellido Materno</td> <td>Edad</td></tr>"; 
-        // });
-        document.getElementById('table').innerHTML+=html;
+        // html="<tr><td>"+rows[rows.length-1].id+"</td> <td>"+rows[rows.length-1].nombre+"</td> <td>"+rows[rows.length-1].ap_pat+"</td> <td>"+rows[rows.length-1].ap_mat+"</td> <td>"+rows[rows.length-1].edad+"</td></tr>"; 
+        rows.forEach(function(element){
+            html+="<tr><td>"+element.id+"</td> <td>"+element.nombre+"</td> <td>"+element.ap_pat+"</td> <td>"+element.ap_mat+"</td> <td>"+element.edad+"</td></tr>"; 
+        });
+        document.getElementById('table').innerHTML=html;
     });
 }
