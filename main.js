@@ -8,13 +8,7 @@ function validarLogin(){
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
     process.env.host=localStorage.getItem('host');
-    process.env.user=localStorage.getItem('user');
-    process.env.password=localStorage.getItem('password');
-    process.env.database=localStorage.getItem('database');
-    process.env.port=localStorage.getItem('port');
-
     if(user=='admin' && password=='123'){
-        alert(process.env.host);
         if (process.env.host != 'null'){
             location.href='./vista3.html';
         } else{
@@ -26,8 +20,12 @@ function validarLogin(){
     }
 }
 function sendParams(){
+    localStorage.setItem('host',document.getElementById('host').value);
+    localStorage.setItem('user',document.getElementById('user').value);
+    localStorage.setItem('password',document.getElementById('password').value);
+    localStorage.setItem('database',document.getElementById('database').value);
+    localStorage.setItem('port',document.getElementById('port').value);
     con = require('./conect');
-    // localStorage.setItem('con', con);
 }
 function addData(){
     // con = localStorage.getItem('con');
@@ -70,4 +68,12 @@ function selectData(){
         });
         document.getElementById('table').innerHTML=html;
     });
+}
+function borrarCon(){
+    localStorage.removeItem('host');
+    localStorage.removeItem('user');
+    localStorage.removeItem('password');
+    localStorage.removeItem('database');
+    localStorage.removeItem('port');
+    location.href='./vista2.html';
 }
