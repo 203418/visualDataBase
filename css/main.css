@@ -1,44 +1,59 @@
 *{
     box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffffe0 0, #feffdc 8.33%, #f3ffd7 16.67%, #e6ffd3 25%, #d8fbcf 33.33%, #c7f7cc 41.67%, #b5f2c9 50%, #a1edc8 58.33%, #8de9c9 66.67%, #79e4cc 75%, #63e0d0 83.33%, #4bddd6 91.67%, #2fd9dd 100%);
+    display:flex;
+    justify-content: center;
+}
 .input-custom {
     border-color: chocolate !important;
 }
 
 .row-custom {
-    top: 10px !important;
     width: 90%;
-    height: 90% !important;
-    left: 5%;
+    height: 100% !important;
+    margin: 10px 0 10px 0;
+    /* margin-bottom: 5%; */
+    background-image: radial-gradient(circle at 50% 50%, #9df29d 0, #9df29d 50%, #9df29d 100%);
 }
 .container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
+
+.columns .column textarea{
+    margin: 10px 0;
+    width: 100%;
+}
+
 .formulario{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 .formulario .boton{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 .formulario .boton button{
-    width: 100%;
+    width: 48%;
     height: 50px;
+    font-size: 12px;
+    margin: 0 5px 5px 0;
 }
 .formulario .boton .btn2{
     margin-top: 1px;
+    font-size: 12px;
 }
 .formulario .datos{
-    width: 60%;
-    padding: 0 20px;
+    width: 55%;
     display: flex;
     flex-wrap: wrap;
     align-content:space-around;
@@ -47,11 +62,12 @@
 }
 .formulario .datos input{
     width: 45%;
+    background-color: transparent;
 }
 .table-container{
     width: 80%;
     margin:10px auto;
-    box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+    border-bottom: 1px solid #00d1b2;
 }
 .table-container .emblema{
     width: 100%;
@@ -59,8 +75,11 @@
     text-align: center;
 }
 .table-container .emblema span{
-    color:#8f8d8d;
+    color:#ffffff;
     font-size: 20px;
+}
+.table-container .table{
+    background-color: transparent;
 }
 .table-container .table tr{
     border: 1px solid #00d1b2;
@@ -68,5 +87,17 @@
 .table-container .table tr td{
     border: 1px solid #00d1b2;
     text-align: center;
-    color:#b5b4b4;
+    color:#ffffff;
+    
+}
+.column input{
+    background-color: transparent;
+    color: white;
+    border: #ce3e;
+}
+.column textarea{
+    background-color: transparent;
+    border: #ce3e;
+    color: white;
+    height: 70px;
 }

@@ -4,7 +4,7 @@
     
 }
 body{
-    min-height: 100vh;
+    height: 100vh;
     background: url(../Media/purple_vibes___android_n_wallpaper_by_shreydan-d9uofx9.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +22,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    max-width: 500px;
     
 }
 .imagen{

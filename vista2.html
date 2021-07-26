@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/bulma.css">
-    <title>registroMysql</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>registro Mysql</title>
 </head>
 <body>
     <div class="card row-custom">
         <div class="card-content">
-            <div class="content" style="height: 500px;">
+            <div class="content">
                 <div class="columns">
                     <div class="column">
                         <button class="button is-primary" style="width: 100% !important; "
                             onclick="sendParams()">Conectar</button>
+                            <textarea id="txtData" cols="30" rows="10" readonly>
+                            </textarea>
                     </div>
                     <div class="column">
                         <input id="host" class="input-custom input is-primary" type="text" placeholder="Host">
@@ -24,18 +26,14 @@
                         <input id=user class="input-custom input is-primary" type="text" placeholder="User">
                         <br>
                         <br>
-                        <input id="password" class="input-custom input is-primary" type="text" placeholder="Password">
+                        <input id="password" class="input-custom input is-primary" type="password" placeholder="Password">
                         <br>
                         <br>
                         <input id="database" class="input-custom input is-primary" type="text" placeholder="Database">
                         <br>
                         <br>
-                        <input id="port" class="input-custom input is-primary" type="text" placeholder="Port">
+                        <input id="port" class="input-custom input is-primary" type="te" placeholder="Port">
                     </div>
-                    <br>
-                    <br>
-                    <textarea name="" id="txtData" cols="30" rows="10" readonly>
-                    </textarea>
                 </div>
             </div>
         </div>

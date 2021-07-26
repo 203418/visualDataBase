@@ -1,11 +1,3 @@
-// if (typeof localStorage === "undefined" || localStorage === null) {
-//     var LocalStorage = require('node-localstorage').LocalStorage;
-//     localStorage = new LocalStorage('./scratch');
-//   }
-// localStorage.setItem('Kevin', 'Visual');
-// console.log(localStorage.getItem('Kevin'));
-// const con = require('./conect');
-
 const { app, BrowserWindow } = require('electron');
 
 function createWindow() {
