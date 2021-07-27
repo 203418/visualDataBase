@@ -69,7 +69,13 @@ function borrarCon(opcion){
     localStorage.removeItem('port');
     if(opcion==1)
         location.href='./vista2.html';
-    else
+    else{
         location.href='./index.html';
+        cerrarCon();
+    }
+}
+function cerrarCon(){
+    con.end();
+    window.close();
 }
                 
